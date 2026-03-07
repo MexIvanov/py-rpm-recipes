@@ -9,6 +9,22 @@
 2. Зависит от сторонней библиотеки (`requests`).
 3. Автоматически создает исполняемую команду в терминале (через `entry_points`).
 
+Установим необходимые пакеты для сборки:
+```bash
+sudo dnf install python3-devel python3-setuptools
+```
+
+**Структура проекта перед архивацией (`tar -czvf`):**
+
+```text
+weather-cli-1.0/
+├── setup.py
+└── weather_cli/
+    ├── __init__.py
+    ├── core.py
+    └── cli.py
+```
+
 ---
 
 ### Шаг 1: Создание структуры проекта
@@ -17,16 +33,6 @@
 ```bash
 mkdir -p ~/weather-cli-1.0/weather_cli
 cd ~/weather-cli-1.0
-```
-
-Структура нашего проекта будет выглядеть так:
-```text
-weather-cli-1.0/
-├── setup.py
-└── weather_cli/
-    ├── __init__.py
-    ├── core.py
-    └── cli.py
 ```
 
 #### 1. Файл `weather_cli/__init__.py`
